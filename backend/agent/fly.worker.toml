@@ -1,0 +1,18 @@
+app = "michele-lumina-a1-worker-2026"
+primary_region = "ord"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  MONGODB_DB = "lumina"
+  VECTOR_BACKEND = "atlas-vector-search"
+  EMBEDDING_MODEL = "text-embedding-3-small"
+
+[processes]
+  app = "node dist/worker.js"
+
+[[vm]]
+  memory = "512mb"
+  cpu_kind = "shared"
+  cpus = 1

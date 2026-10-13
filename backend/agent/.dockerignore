@@ -1,0 +1,10 @@
+.git
+.env
+**/.env
+node_modules
+**/node_modules
+runs
+reports
+web
+backend/gateway
+*.log

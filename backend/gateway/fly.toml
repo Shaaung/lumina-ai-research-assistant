@@ -1,0 +1,22 @@
+app = "michele-lumina-a1-gateway-2026"
+primary_region = "ord"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "8787"
+  RATE_LIMIT_PER_MINUTE = "30"
+  LOG_LEVEL = "info"
+
+[http_service]
+  internal_port = 8787
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+[[vm]]
+  memory = "256mb"
+  cpu_kind = "shared"
+  cpus = 1

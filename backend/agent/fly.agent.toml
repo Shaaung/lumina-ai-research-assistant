@@ -1,0 +1,19 @@
+app = "michele-lumina-a1-agent-2026"
+primary_region = "ord"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "8000"
+  MONGODB_DB = "lumina"
+  VECTOR_BACKEND = "atlas-vector-search"
+  LLM_PROVIDER = "anthropic"
+  SEARCH_PROVIDER = "tavily"
+  EMBEDDING_MODEL = "text-embedding-3-small"
+  DEEP_DAILY_CAP = "5"
+
+[[vm]]
+  memory = "512mb"
+  cpu_kind = "shared"
+  cpus = 1
